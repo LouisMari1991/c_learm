@@ -20,10 +20,10 @@ void rearrange( char *output, char const *input, int n_columns, int const column
 
 int main(void)
 {
-    int n_columns;          // 进行处理的列标号
-    int columns[MAX_COLS];  // 需要处理的列数
-    char input[MAX_INPUT];  // 容纳输入行的数组
-    char output[MAX_INPUT]; // 容纳输出行的数组
+    int  n_columns;          // 进行处理的列标号
+    int  columns[MAX_COLS];  // 需要处理的列数
+    char input[MAX_INPUT];   // 容纳输入行的数组
+    char output[MAX_INPUT];  // 容纳输出行的数组
 
     // 读取该串列标号
     n_columns = read_column_numbers(columns, MAX_COLS);
