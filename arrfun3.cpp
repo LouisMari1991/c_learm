@@ -13,13 +13,13 @@ int main()
 
     int size = fill_arry(properties, MAX);
     cout << "size = " << size;
-    // show_array(properties, size);
-    // cout << "Enter revaluation factor: ";
-    // double factor;
-    // cin >> factor;
-    // revalue(factor, properties, size);
-    // show_array(properties, size);
-    // cout << "Done.\n";
+    show_array(properties, size);
+    cout << "Enter revaluation factor: ";
+    double factor;
+    cin >> factor;
+    revalue(factor, properties, size);
+    show_array(properties, size);
+    cout << "Done.\n";
     return 0;
 }
 
@@ -28,9 +28,8 @@ int fill_arry(double *ar, int limit)
     using namespace std;
     double temp;
     int i;
-    for (int i = 0; i < limit; i++)
+    for (i = 0; i < limit; i++)
     {
-        cout << "hahahaha" << endl;
         cout << "Enter value #" << (i + 1) << ": ";
         cin >> temp;
         if (!cin)
@@ -44,9 +43,7 @@ int fill_arry(double *ar, int limit)
         else if (temp < 0)
             break;
         ar[i] = temp;
-        cout << "i = " << i << endl;
     }
-    cout << "i = " << i << endl;
     return i;
 }
 
