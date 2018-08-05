@@ -18,3 +18,8 @@ double (*pf)(int);  // pf ponits to a function that takes
                     // ont int argument and that 
                     // returns type double
 ```
+
+### 内联函数
+要使用内联函数，必须采取下述措施之一：
+* 在函数声明前加上关键字 `inline`
+* 在函数定义前加上关键字 `inline`

@@ -1,0 +1,57 @@
+// swaps.cpp -- swingpping with references and with pointers
+#include<iostream>
+void swpar(int &a, int &b);
+void swapp(int *p, int *q);
+void swapv(int a, int b);
+
+int main()
+{
+    using namespace std;
+    int wallet1 = 300;
+    int wallet2 = 350;
+
+    cout << "wallet1 = $" << wallet1;
+    cout << ", wallet2 = $" << wallet2 << endl;
+
+    cout << "Using references to swap contents: \n";
+    swpar(wallet1, wallet2);
+    cout << "wllet1 = $" << wallet1;
+    cout << ", wallet2 = $" << wallet2 << endl;
+
+    cout << "Using pointers to swap contents: \n";
+    swapp(&wallet1, &wallet2);
+    cout << "wllet1 = $" << wallet1;
+    cout << ", wallet2 = $" << wallet2 << endl;
+
+    cout << "Trying to use passing by value: \n";
+    swapv(wallet1, wallet2);
+    cout << "wllet1 = $" << wallet1;
+    cout << ", wallet2 = $" << wallet2 << endl;
+
+    return 0;
+}
+
+void swpar(int &a, int &b)
+{
+    int temp;
+    temp = a;
+    a = b;
+    b = temp;
+}
+
+void swapp(int *p, int *q)
+{
+    int temp;
+    std::cout << *p << ", " << *q << std::endl;
+    temp = *p;
+    *p = *q;
+    *q = temp;
+}
+
+void swapv(int a, int b)
+{
+    int temp;
+    temp = a;
+    a = b;
+    b = temp;
+}
