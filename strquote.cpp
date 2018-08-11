@@ -50,11 +50,6 @@ const string& version2(string &s1, const string &s2)
     return s1;
 }
 
-const string& version3(string &s1, const string &s2)
-{
-
-}
-
 /*
 const string& version3(string &s1, const string &s2)
 {
