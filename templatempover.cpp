@@ -27,6 +27,7 @@ int main()
     for (int i = 0; i < 3; i++)
         pd[i] = &mr_E[i].amount;
     
+
     cout << "Listing Mr. E's counts of things: \n";
     ShowArray(things, 6);
     cout << "Listing Mr. E's debts: \n";

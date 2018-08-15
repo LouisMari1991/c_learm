@@ -26,6 +26,7 @@ int main()
     int array[] = {1, 2 ,3};
     // int array1[3] = {1,2,3};
 
+
     int *pi = array;
     
     cout << *pi << endl;
