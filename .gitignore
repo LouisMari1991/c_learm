@@ -33,15 +33,15 @@ build
 *.swp
 .DS_Store
 *.log
-
 *.imi
+.vscode
+/*.imi
+projectFilesBackup
+*.txt
 
-a.out
-
+#vscode
 .vscode
 
-/*.imi
-
-projectFilesBackup
-
-*.txt
+# c
+a.out
+*.h.gch
