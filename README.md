@@ -43,3 +43,16 @@ double (*pf)(int);  // pf ponits to a function that takes
 * 如果数据对象是类对象，则使用引用。
 
 当然，这只是一些指导原则，很可能有充分的理由做出其他的选择。例如，对于基本类型，cin 使用引用，因此可以使用 `cin >> n`，而不是 `cin >> &n`。
+
+### 存储说明符（storage class specifier）
+
+* auto：auto将变量声明为自动变量
+* register：关键字 register 用于在声明中指示寄存器存储类型
+* static： 关键字 static 被用在作用域为整个文件的声明中时，表示内部链接性；被用于局部声明中，表示局部变量的存储持续性为静态的
+* extern： 关键字 extern 表明是应用声明，即声明应用在其他地方定义的变量。
+* mutable：关键字 mutable 的含义将根据 const 来解释，可以用它来指出，即使结构（或类）变量为 const，其某个成员也可以被修改。
+
+### cv-限定符（cv-qualifier）
+
+* const：const 表明内存被初始化以后，程序便不能再对它进行修改
+* valatile：volatile 关键字表明，即使程序代码没有对内存单元进行修改，其值也可能发生变化。
