@@ -1,4 +1,6 @@
 // newplace.cpp -- using placement new 
+// 9.3 布局new操作符，要使用布局 new 特性，首先要包含头文件 new, 它提供了这个版本的 new 操作符的原型，然后将 new 操作符用于提供了所需地址的参数。
+
 #include<iostream>
 #include<new>
 const int BUF = 512;
@@ -47,7 +49,7 @@ int main()
     for (i = 0; i < N; i ++)
     {
         cout << pd1[i] << " at " << &pd1[i] << "; ";
-        cout << pd1[i] << " at " << &pd2[i] << endl;
+        cout << pd2[i] << " at " << &pd2[i] << endl;
     }
     delete [] pd1;
     delete [] pd3;
