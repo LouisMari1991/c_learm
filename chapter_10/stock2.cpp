@@ -1,12 +1,11 @@
-// stock1.cpp -- Stock class implementation with constructors, destructor added
+// stock2.cpp -- improved version
 #include <iostream>
 #include <cstring>
-#include "stock1.h"
+#include "stock2.h"
 
-// constructions (verbose versions)
-Stock::Stock()
+// constructor
+Stock::Stock()  // default constructor
 {
-    std::cout << "Default constructor called\n";
     std::strcpy(company, "no name");
     shares = 0;
     share_val = 0.0;
@@ -15,13 +14,12 @@ Stock::Stock()
 
 Stock::Stock(const char * co, int n, double pr)
 {
-    std::cout << "Constructor using " << co << " called\n";
     std::strncpy(company, co, 29);
     company[29] = '\0';
 
     if (n < 0)
     {
-        std::cerr << "Number of chares can't be negative; "
+        std::cerr << "Number of shares can't be negative. "
             << company << " shares set to 0.\n";
         shares = 0;
     }
@@ -32,9 +30,9 @@ Stock::Stock(const char * co, int n, double pr)
 }
 
 // class destructor
-Stock::~Stock() // verbose class destructor
+Stock::~Stock()     // quiet class destructor
 {
-    std::cout << "Bye, " << company << "!\n";
+
 }
 
 // other methods
@@ -42,8 +40,8 @@ void Stock::buy(int num, double price)
 {
     if (num < 0)
     {
-        std::cerr << "Number of chares can't be negative. "
-            << company << " Transaction is aborted.\n";
+        std::cerr << "Number of shares purchased can't be negatice. "
+            << "Transaction is aborted.\n";
     }
     else 
     {
@@ -58,8 +56,8 @@ void Stock::sell(int num, double price)
     using std::cerr;
     if (num < 0)
     {
-        cerr << "Number of chares can't be negative. "
-            << "Transaction is aborted.\n";
+        cerr << "Number of shares sod can't be negatice. "
+            << "Transaction is aborted. \n";
     }
     else if (num > shares)
     {
@@ -80,7 +78,7 @@ void Stock::update(double price)
     set_tot();
 }
 
-void Stock::show()
+void Stock::show() const
 {
     using std::cout;
     using std::endl;
@@ -88,4 +86,12 @@ void Stock::show()
         << " Shares: " << shares << endl
         << " Share Price: $" << share_val
         << " Total Worth: $" << total_val << endl;
+}
+
+const Stock & Stock::topval(const Stock & s) const 
+{
+    if (s.total_val > total_val)
+        return s;
+    else 
+        return *this;
 }
