@@ -17,7 +17,18 @@ int main()
     cout << "headline2: " << headline2 << endl;
     cout << "sports: " << sports << endl;
     callme1(headline1);
-
+    cout << "headline1: " << headline1 << endl;
+    callme2(headline2);
+    cout << "headline2: " << headline2 << endl;
+    cout << "Initialize one object to another: \n";
+    StringBad sailor = sports;
+    cout << "sailor: " << sailor << endl;
+    cout << "Assign one object to another: \n";
+    StringBad knot;
+    knot = headline1;
+    cout << "knot: " << knot << endl;
+    cout << "End of main()\n";
+    
     return 0;
 }
 
