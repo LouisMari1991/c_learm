@@ -18,6 +18,17 @@ void TableTennisPlayer::Name() const
     std::cout << lastname << ", " << firstname;
 }
 
+void Show(const TableTennisPlayer &rt)
+{
+    std::cout << "Name: ";
+    rt.Name();
+    std::cout << "\nTable: ";
+    if (rt.HasTable())
+        std::cout << "yes\n";
+    else 
+        std::cout << "no\n";
+}
+
 // RatedPlayer methods
 RatedPlayer::RatedPlayer(unsigned int r, const char * fn, 
     const char * ln, bool ht): TableTennisPlayer(fn, ln, ht)
