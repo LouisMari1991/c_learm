@@ -8,14 +8,15 @@ class Brass
 private:
     enum {MAX = 35};
     char fullName[MAX];
-    long acctNum;
-    double balance;
+    long acctNum;       
+    double balance;                     // 余额
 public:
-    Brass(const char *s = "Nullbody", long an = -1, double bal = 0.0);
-    void Deposit(double amt);
-    virtual void Withdraw(double amt);
-    double Balance() const;
+    Brass(const char *s = "Nullbody", long an = -1, 
+                double bal = 0.0);
+    void Deposit(double amt);           // 存款
+    double Balance() const;             // 余额
     virtual void ViewAcct() const;
+    virtual void Withdraw(double amt);  // 取钱 
     virtual ~Brass() {};    
 };
 
@@ -23,12 +24,13 @@ public:
 class BrassPlus : public Brass
 {
 private:
-    double maxLoan;
-    double rate;
-    double owesBank;
+    double maxLoan;     // 透支限额 500
+    double rate;        // 贷款利率 10%
+    double owesBank;    // 用户欠款 
 public:
-    BrassPlus(const char *s = "NullBody", long an = -1, double bar = 0.0, 
-        double ml = 500, double r = 0.10);    
+    BrassPlus(const char *s = "NullBody", long an = -1, 
+            double bal = 0.0, double ml = 500, 
+            double r = 0.10);    
     BrassPlus(const Brass & ba, double ml = 500, double r = 0.1);
     virtual void ViewAcct() const;
     virtual void Withdraw(double amt);
