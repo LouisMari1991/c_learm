@@ -1,7 +1,4 @@
 // acctabc.h -- bank account classes
-
-#include <iostream>
-
 #ifndef ACCTABC_H_
 #define ACCTABC_H_
 
@@ -23,7 +20,7 @@ public:
     void Deposit(double amt);                           // 存款    
     virtual void Withdraw(double amt) = 0;              // 取钱 pure virtual function
     double Balance()const { return balance; }           // 余额
-    virtual void ViewAcct()const = 0;                   // pure virtual function
+    virtual void ViewAcct()const = 0;                   // 输出账户信息 pure virtual function
     virtual ~AcctABC() {}                               // 析构函数
 };
 
