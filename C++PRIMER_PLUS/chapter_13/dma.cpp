@@ -99,4 +99,3 @@ std::ostream & operator<<(std::ostream & os, const hasDMA & hs)
     os << "Style: " << hs.style << std::endl;
     return os;
 }
-
