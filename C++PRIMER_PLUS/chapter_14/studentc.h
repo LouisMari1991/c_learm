@@ -18,7 +18,7 @@ public:
     Student() : name("Null Student"), scores() {}
     Student(const std::string & s)
         : name(s), scores() {}
-    explicit Student(int n) : name("Nully"), scores() {}
+    explicit Student(int n) : name("Nully"), scores(n) {}
     Student(const std::string & s, int n)
         : name(s), scores(n) {}
     Student(const std::string & s, const ArrayDb & a)
@@ -27,7 +27,7 @@ public:
         : name(str), scores(pd, n) {}
     ~Student() {}
     double Average() const;
-    const std::string & Name() const;
+    const std::string & Name() const;      
     double & operator[](int i);
     double operator[](int i) const;
 // friends

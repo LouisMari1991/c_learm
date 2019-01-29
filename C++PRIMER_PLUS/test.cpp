@@ -27,21 +27,30 @@ int main()
     // int array1[3] = {1,2,3};
 
 
-    int *pi = array;
+    // int *pi = array;
     
-    cout << *pi << endl;
+    // cout << *pi << endl;
     
-    cout << pi[0] << endl;
-    cout << pi[1] << endl;
-    cout << pi[2] << endl;
+    // cout << pi[0] << endl;
+    // cout << pi[1] << endl;
+    // cout << pi[2] << endl;
         
     // cout << sizeof(array) << endl;
     // cout << sizeof(array1) << endl;
     // cout << sizeof(pi) << endl;
 
-    // long a = 3, b = 5;
+    // int a = 3, b = 5;
 
     // swapr(a, b);
+
+    // cout << a << " , " << b << endl;
+
+    for(int i = 0;i < 100;i++)
+    {
+        if (i % 5 == 4) {
+            cout << i << endl;
+        }
+    }
 
     return 0;
 }
