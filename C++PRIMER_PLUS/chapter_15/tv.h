@@ -16,7 +16,7 @@ public:
     void onoff() { state = (state == On) ? Off : On; }
     bool ison() { return state == On; }
     bool volup();
-    bool vodown();
+    bool voldown();
     void chanup();
     void chandown();
     void set_mode() { mode = (mode == Antenna) ? Cable : Antenna; }
@@ -39,7 +39,7 @@ private:
 public:
     Remote(int m = Tv::TV): mode(m) {}
     bool volup(Tv & t) { return t.volup(); }
-    bool voldown(Tv & t) { return t.vodown(); }
+    bool voldown(Tv & t) { return t.voldown(); }
     void chanup(Tv & t) { t.chanup(); }
     void chandown(Tv & t) { t.chandown(); }
     void set_chan(Tv & t, int c) { t.channel = c; }

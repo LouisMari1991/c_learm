@@ -1,6 +1,7 @@
 // use_tv.cpp -- using the TV and Remote classes
 #include <iostream>
-#include "tv.h"
+//#include "tv.h"
+#include "tvfm.h"
 
 int main()
 {

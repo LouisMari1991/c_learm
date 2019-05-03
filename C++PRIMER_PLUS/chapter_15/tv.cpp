@@ -1,6 +1,7 @@
 // tv.cpp -- methods for the Tv class (Remote methods are inline)
 #include <iostream>
-#include "tv.h"
+//#include "tv.h"
+#include "tvfm.h"
 
 bool Tv::volup()
 {
@@ -13,7 +14,7 @@ bool Tv::volup()
     
 }
 
-bool Tv::vodown()
+bool Tv::voldown()
 {
     if (volume < MinVal) {
         volume--;
